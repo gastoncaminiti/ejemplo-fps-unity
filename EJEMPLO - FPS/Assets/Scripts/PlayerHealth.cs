@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
         if (hp <= 0)
         {
             Debug.Log("GAME OVER");
+            GetComponent<DeathHandler>().HandleDeath();
         }
 
     }

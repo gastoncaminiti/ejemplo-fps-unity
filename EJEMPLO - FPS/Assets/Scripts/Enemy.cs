@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
 
     public void Wounded(int damage)
     {
+        BroadcastMessage("OnDamageTaken");
         health -= damage;
         if (health <= 0)
         {

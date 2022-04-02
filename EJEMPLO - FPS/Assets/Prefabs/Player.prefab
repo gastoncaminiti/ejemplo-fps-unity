@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3306860418931634177}
   - component: {fileID: 4791104481289163213}
   - component: {fileID: 1245820526676339825}
+  - component: {fileID: 1499728691142792081}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -234,6 +235,19 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1499728691142792081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245820526676339837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 043f585af7ed3614f9d1e8a67dac8b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverCanvas: {fileID: 0}
 --- !u!1 &3172251531069519979
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,7 +452,7 @@ PrefabInstance:
       objectReference: {fileID: 2175821668339768425}
     - target: {fileID: 5163079120067400943, guid: 5a797810c89ded44d84497a32dfdf245, type: 3}
       propertyPath: m_Name
-      value: machinegun
+      value: Machinegun
       objectReference: {fileID: 0}
     - target: {fileID: 5163079120067561679, guid: 5a797810c89ded44d84497a32dfdf245, type: 3}
       propertyPath: m_RootOrder
