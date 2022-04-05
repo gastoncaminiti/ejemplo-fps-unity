@@ -2105,6 +2105,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 350247188971734034, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: weaponRange
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 350247188971734034, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: weaponDamage
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1245820526676339834, guid: f6735360e13904148960c7a42ed2981b, type: 3}
       propertyPath: RotationSpeed
       value: 0.2
@@ -2161,6 +2169,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2203481111325281087, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: fpsCamera
+      value: 
+      objectReference: {fileID: 705275857}
+    - target: {fileID: 2602193855743724907, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: weaponDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837787037118356932, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: currentWeapon
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4846012898812063776, guid: f6735360e13904148960c7a42ed2981b, type: 3}
       propertyPath: CVcamera
       value: 
@@ -2187,6 +2207,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4846012898812063776, guid: f6735360e13904148960c7a42ed2981b, type: 3}
       propertyPath: zoomedOutRotationSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052510446474675440, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7412525913195187593, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439806774888459130, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

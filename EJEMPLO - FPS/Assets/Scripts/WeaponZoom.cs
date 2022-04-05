@@ -5,6 +5,7 @@ using StarterAssets;
 public class WeaponZoom : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera fpsCamera;
+    [SerializeField] private FirstPersonController fpsScript;
     [SerializeField] private float zoomedOutFOV = 30f;
     [SerializeField] private float zoomedInFOV = 10f;
 
@@ -13,11 +14,8 @@ public class WeaponZoom : MonoBehaviour
 
     bool zoomedToggle = false;
 
-    private FirstPersonController fpsScript;
-
     private void Start()
     {
-        fpsScript = GetComponent<FirstPersonController>();
         SetFieldOfView(zoomedOutFOV);
         SetRotationSpeed(zoomedOutRotationSpeed);
     }

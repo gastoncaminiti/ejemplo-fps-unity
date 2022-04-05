@@ -8,14 +8,19 @@ public class Weapon : MonoBehaviour
 
     [SerializeField][Range(1, 200)] private int weaponRange = 100;
     [SerializeField][Range(1, 500)] private int weaponDamage = 25;
+    [SerializeField][Range(0, 5)]   private float weaponDelay = 0;
     [SerializeField] private ParticleSystem shootVFX;
     [SerializeField] private GameObject hitVFXSystem;
+    [SerializeField] private Ammo ammoSlot;
+
+    private bool canShoot = true;
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && (ammoSlot.AmmoAmount > 0) && canShoot)
         {
-            Shoot();
+            //Shoot();
+            StartCoroutine(ShootCoroutine());
         }
         transform.LookAt(GetShootTrasform().forward * weaponRange);
     }
@@ -24,7 +29,15 @@ public class Weapon : MonoBehaviour
     {
         PlayShootVFX();
         ShootRaycast();
+        ammoSlot.AmmoAmount--;
+        Debug.Log(ammoSlot.AmmoAmount);
+    }
 
+    IEnumerator ShootCoroutine(){
+        canShoot = false;
+        Shoot();
+        yield return new WaitForSeconds(weaponDelay);
+        canShoot = true;
     }
 
     private void PlayShootVFX()
