@@ -6,7 +6,6 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
 
-    [SerializeField] private Transform shootOrigin;
     [SerializeField][Range(1, 200)] private int weaponRange = 100;
     [SerializeField][Range(1, 500)] private int weaponDamage = 25;
     [SerializeField] private ParticleSystem shootVFX;
@@ -18,6 +17,7 @@ public class Weapon : MonoBehaviour
         {
             Shoot();
         }
+        transform.LookAt(GetShootTrasform().forward * weaponRange);
     }
 
     private void Shoot()
@@ -35,7 +35,8 @@ public class Weapon : MonoBehaviour
     private void ShootRaycast()
     {
         RaycastHit hit;
-        if (Physics.Raycast(shootOrigin.position, shootOrigin.forward, out hit, weaponRange))
+        Transform shootTrasform = GetShootTrasform();
+        if (Physics.Raycast(shootTrasform.position, shootTrasform.forward, out hit, weaponRange))
         {
 
             Debug.Log(hit.transform.name);
@@ -66,6 +67,12 @@ public class Weapon : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawLine(shootOrigin.position, shootOrigin.forward * weaponRange);
+        Transform shootTrasform = GetShootTrasform();
+        Gizmos.DrawLine(shootTrasform.position, shootTrasform.forward * weaponRange);
+    }
+
+    private Transform GetShootTrasform()
+    {
+        return Camera.main.gameObject.transform;
     }
 }

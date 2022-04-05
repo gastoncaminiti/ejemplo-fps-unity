@@ -614,6 +614,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688655087}
   m_CullTransparentMesh: 1
+--- !u!114 &705275857 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8762286023885395323, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
+  m_PrefabInstance: {fileID: 2053905672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,6 +1394,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: field of view
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: far clip plane
       value: 500
       objectReference: {fileID: 0}
@@ -1987,6 +2002,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 4135013736321598557}
+    - target: {fileID: 8762286023885395323, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
 --- !u!4 &4135013736321598557 stripped
@@ -2086,6 +2105,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1245820526676339834, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: RotationSpeed
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1245820526676339837, guid: f6735360e13904148960c7a42ed2981b, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2137,6 +2160,34 @@ PrefabInstance:
     - target: {fileID: 1874020294991984327, guid: f6735360e13904148960c7a42ed2981b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846012898812063776, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: CVcamera
+      value: 
+      objectReference: {fileID: 705275857}
+    - target: {fileID: 4846012898812063776, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: fpsCamera
+      value: 
+      objectReference: {fileID: 705275857}
+    - target: {fileID: 4846012898812063776, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: zoomedInFOV
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846012898812063776, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: zoomedOutFOV
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846012898812063776, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: virtualCamera
+      value: 
+      objectReference: {fileID: 705275857}
+    - target: {fileID: 4846012898812063776, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: zoomedInRotationSpeed
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846012898812063776, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: zoomedOutRotationSpeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6735360e13904148960c7a42ed2981b, type: 3}
