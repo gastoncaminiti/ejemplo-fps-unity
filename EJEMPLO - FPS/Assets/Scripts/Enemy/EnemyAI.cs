@@ -14,15 +14,23 @@ public class EnemyAI : MonoBehaviour
     private float distanceToTarget = Mathf.Infinity;
 
     private bool isProvoked = false;
+    private Enemy enemy;
 
     void Start()
     {
+        enemy = GetComponent<Enemy>();
         navMeshAgent = GetComponent<NavMeshAgent>();
-
     }
 
     void Update()
     {
+        if (enemy.IsDead)
+        {
+            isProvoked = false;
+            enabled = false;
+            navMeshAgent.enabled = false;
+        }
+
         distanceToTarget = Vector3.Distance(target.position, transform.position);
 
         if (isProvoked)
@@ -78,5 +86,19 @@ public class EnemyAI : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, chaseRange);
+    }
+
+    public void RepositionBody(){
+        //Transform enemyModel =  transform.GetChild(0).transform;
+        //enemyModel.position  = enemyModel.position - new Vector3(0f,0.5f,0f);
+        StartCoroutine(DelayReposition());
+    }
+
+    IEnumerator DelayReposition(){
+        for (int i = 0; i < 20; i++)
+        {
+            transform.GetChild(0).transform.position -= new Vector3(0f,0.025f,0f);
+            yield return new WaitForSeconds(0.025f);
+        }
     }
 }
