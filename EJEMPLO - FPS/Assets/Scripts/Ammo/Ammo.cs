@@ -38,4 +38,9 @@ public class Ammo : MonoBehaviour
     {
         GetAmmoSlot(ammoType).AmmoAmount--;
     }
+
+    public void IncreaseCurrentAmmo(AmmoType ammoType)
+    {
+        GetAmmoSlot(ammoType).AmmoAmount++;
+    }
 }
