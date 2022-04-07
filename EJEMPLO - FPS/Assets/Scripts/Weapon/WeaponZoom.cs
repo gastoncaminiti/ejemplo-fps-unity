@@ -48,4 +48,10 @@ public class WeaponZoom : MonoBehaviour
     {
         fpsScript.RotationSpeed = newRotationSpeed;
     }
+
+    private void OnDisable()
+    {
+        SetFieldOfView(zoomedOutFOV);
+        SetRotationSpeed(zoomedOutRotationSpeed);
+    }
 }

@@ -8,32 +8,40 @@ public class Weapon : MonoBehaviour
 
     [SerializeField][Range(1, 200)] private int weaponRange = 100;
     [SerializeField][Range(1, 500)] private int weaponDamage = 25;
-    [SerializeField][Range(0, 5)]   private float weaponDelay = 0;
+    [SerializeField][Range(0, 5)] private float weaponDelay = 0;
     [SerializeField] private ParticleSystem shootVFX;
     [SerializeField] private GameObject hitVFXSystem;
+
     [SerializeField] private Ammo ammoSlot;
+    [SerializeField] private AmmoType ammoType;
 
     private bool canShoot = true;
 
+    private void OnEnable()
+    {
+        canShoot = true;
+    }
+
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && (ammoSlot.AmmoAmount > 0) && canShoot)
+
+        if (Input.GetButtonDown("Fire1") && (ammoSlot.GetCurrentAmmo(ammoType) > 0) && canShoot)
         {
-            //Shoot();
             StartCoroutine(ShootCoroutine());
         }
         transform.LookAt(GetShootTrasform().forward * weaponRange);
+  
     }
 
     private void Shoot()
     {
         PlayShootVFX();
         ShootRaycast();
-        ammoSlot.AmmoAmount--;
-        Debug.Log(ammoSlot.AmmoAmount);
+        ammoSlot.ReduceCurrentAmmo(ammoType);
     }
 
-    IEnumerator ShootCoroutine(){
+    IEnumerator ShootCoroutine()
+    {
         canShoot = false;
         Shoot();
         yield return new WaitForSeconds(weaponDelay);

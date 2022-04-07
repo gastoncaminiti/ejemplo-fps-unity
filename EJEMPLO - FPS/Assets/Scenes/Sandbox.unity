@@ -2173,6 +2173,30 @@ PrefabInstance:
       propertyPath: fpsCamera
       value: 
       objectReference: {fileID: 705275857}
+    - target: {fileID: 2492004040737293577, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: ammoSlots.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492004040737293577, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: ammoSlots.Array.data[1].ammoType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492004040737293577, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: ammoSlots.Array.data[2].ammoType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492004040737293577, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: ammoSlots.Array.data[0].ammoAmount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492004040737293577, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: ammoSlots.Array.data[1].ammoAmount
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492004040737293577, guid: f6735360e13904148960c7a42ed2981b, type: 3}
+      propertyPath: ammoSlots.Array.data[2].ammoAmount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2602193855743724907, guid: f6735360e13904148960c7a42ed2981b, type: 3}
       propertyPath: weaponDelay
       value: 2

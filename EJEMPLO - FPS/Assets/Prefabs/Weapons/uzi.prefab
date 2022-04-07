@@ -53,6 +53,7 @@ MonoBehaviour:
   shootVFX: {fileID: 1443984393923046766}
   hitVFXSystem: {fileID: 4636334952922731815, guid: 6c2a15d97ab3a224593b6f46472af8ec, type: 3}
   ammoSlot: {fileID: 0}
+  ammoType: 2
 --- !u!1 &7368046517872056721
 GameObject:
   m_ObjectHideFlags: 0
