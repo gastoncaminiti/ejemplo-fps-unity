@@ -29,7 +29,7 @@ public class Weapon : MonoBehaviour
         {
             StartCoroutine(ShootCoroutine());
         }
-        transform.LookAt(GetShootTrasform().forward * weaponRange);
+        //transform.LookAt(GetShootTrasform().forward * weaponRange);
   
     }
 
